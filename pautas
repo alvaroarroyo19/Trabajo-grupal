@@ -1,0 +1,21 @@
+Pautas para la presentación de Trabajo Integrador Final
+Observaciones generales:
+
+• Se debe entregar un Trabajo Práctico Final Integrador sobre un tema propuesto por la
+cátedra.
+• El Trabajo Final será entregado a través del Aula Virtual en el Campus Bimodal de la
+universidad.
+• Si el trabajo no está completo, será desaprobado.
+• La fecha de presentación será el jueves 16 de junio de 2022.
+• Cada grupo tendrá 2 o 3 integrantes.
+
+El Proyecto deberá contener:
+
+• El diseño del algoritmo con un diagrama de flujo de datos o con pseudocódigo.
+• El grafo asociado al algoritmo para realizar el cálculo de complejidad ciclomática.
+• Si se propone una solución modular, se deberá resolver cada módulo propuesto.
+• El programa en lenguaje Python que implementa el algoritmo propuesto.
+• El cálculo de complejidad ciclomática (3 técnicas).
+• La lista de los caminos independientes.
+• La documentación del programa en el código fuente.
+• El diseño de los casos de prueba de cobertura de caminos.
