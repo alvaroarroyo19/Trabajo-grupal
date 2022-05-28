@@ -1,0 +1,24 @@
+
+#version 0.01 tp grupal 
+
+def menu ():    
+    print("Bienvenido a InterBanca")
+    print("Por favor ingrese un tarjeta")
+    print:("                   ")
+    print:("1. Si ingresa tarjeta")
+    print:("2. No ingresa tarjeta")
+    salida = input("que hace el cliente:")
+    return salida
+
+seleccion = menu()
+
+while seleccion != "1" and seleccion !="2" and seleccion :
+  print("bobo o que")
+  seleccion = menu()
+
+if seleccion == "1":
+    print("numero de clave")
+    numero = input("numero de clave")
+    
+elif seleccion == "2":
+    print("gracias por nada")
