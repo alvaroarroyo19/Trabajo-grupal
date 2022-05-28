@@ -1,0 +1,33 @@
+
+#version 0.02 tp grupal 
+
+ 
+def menu_de_entrada ():    
+    print("Bienvenido a InterBanca")
+    print("Por favor ingrese una tarjeta")
+    print("                   ")
+    print("1. Si ingresa tarjeta")
+    print("2. No ingresa tarjeta")
+    salida = input("que hace el cliente: ")
+    return salida
+
+seleccion = menu_de_entrada()
+
+while seleccion != "1" and seleccion !="2" and seleccion :
+    seleccion = menu()
+
+if seleccion == "1":
+    numero = input("numero de clave: ")
+    if numero == "12345":
+        dni = input("verificación de dni: ")
+        if dni == "12345678":
+            print("bienvenido a su cuenta")
+    
+    
+elif seleccion == "2":
+    print("gracias por nada")
+    
+    
+    
+    
+
