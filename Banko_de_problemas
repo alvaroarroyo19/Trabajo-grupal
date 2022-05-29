@@ -1,31 +1,73 @@
+#version 0.03 tp grupal 
 
-#version 0.02 tp grupal 
-
- 
+import time
+   
 def menu_de_entrada ():    
+    print("------------------------")
     print("Bienvenido a InterBanca")
     print("Por favor ingrese una tarjeta")
-    print("                   ")
+    print("")
     print("1. Si ingresa tarjeta")
+    print("")
     print("2. No ingresa tarjeta")
-    salida = input("que hace el cliente: ")
+    print("")
+    salida = input("Que hace el cliente: ")
+    print("")
     return salida
+
+def menu_2 ():
+    print("Bienvenido")
+    print("1. Consulta")
+    print("2. Retiro")
+    print("3. Transferencias")
+    print("4. Salir")
+    salida2 = input("Que hace el cliente: ")
+    print("")
 
 seleccion = menu_de_entrada()
 
-while seleccion != "1" and seleccion !="2" and seleccion :
-    seleccion = menu()
+while seleccion != "1" and seleccion !="2" :
+    seleccion = menu_de_entrada()
 
 if seleccion == "1":
-    numero = input("numero de clave: ")
+    print("Verificando Tarjeta...", end="")
+    for i in range(5):
+        print(".", end="")
+        time.sleep(0.5)
+    print("")
+    
+    numero = input("Ingrese su clave: ")
+    
     if numero == "12345":
-        dni = input("verificación de dni: ")
+        dni = input("Verificación de DNI: ")    
+        
         if dni == "12345678":
-            print("bienvenido a su cuenta")
-    
-    
+            print("")
+            
+            opcion = menu_2 ()
+             
+            
+            
+            if opcion == "1":
+                 print("date")
+           
+           
+            while opcion != "1" and opcion !="2" and opcion != "3" and opcion != "4" :
+                 print("OPCION INCORRECTA")
+                 print("")
+                 opcion = menu_2 ()
+                   
+        
+        else:
+            print("DNI INCORRECTO")
+            seleccion = menu_de_entrada()
+    else:
+        print("CLAVE INCORRECTA")    
+        seleccion = menu_de_entrada()
+
 elif seleccion == "2":
-    print("gracias por nada")
+    print("Gracias por nada")
+    seleccion = menu_de_entrada()
     
     
     
