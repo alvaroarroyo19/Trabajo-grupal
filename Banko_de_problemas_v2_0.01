@@ -1,0 +1,94 @@
+balance_a=0
+#ingresar a la cuneta
+def init():
+    global balance_a
+    balance_a=250.00
+print("----------------------")
+print("Bienvenido a InterBanca")
+print("")
+print("Ingresasr")
+intentos= 3
+pin_code="1234"
+pin_intento= input ("Ingrese su pin de acceso -->")
+while pin_code!= pin_intento:
+    intentos=intentos-1
+    if (intentos==2):
+        print ("Pin incorrecto, intentos restantes = 2")
+        pin_intento= input ("ingrese su pin: ")
+    elif (intentos==1):
+        print ("Pin incorrecto, intentos restantes = 1")
+        pin_intento= input ("Ingrese su pin: ")
+    elif (intentos==0):
+        print ("Sin intentos: su tarjeta sera retenida, por favor comuniquese con atencion al cliente")
+            
+        SystemExit()
+print ()
+print ("Pin Correcto")
+print ("------------")
+#primera funcion: mostrar cantidad de dinero en cuenta   
+def Balance(): 
+    global balance_a
+    print()
+    print ("Tu dinero :",end="")
+    print ("%.2f" % balance_a)
+#segunda funcion: depositar dinero
+def deposito():
+    print ("----------------")
+    print ("Menu de deposito")
+    global balance_a
+    Balance()
+    print ()
+    print("Cuanto quieres depositar: "  ,end="")
+    deposittoaccount = float(input (" > "))
+    print ()
+    print ("Se ingresaron", "%.2f" %deposittoaccount,"$ a su cuenta")
+    balance_a=balance_a +deposittoaccount
+    Balance()
+#tercera funcion: retirar dinero     
+def retirar():
+    print()
+    print ("------------")
+    print ("Menu de retiro")
+    global balance_a
+    Balance()
+    print ()
+    decrease = float(input("Cunato quieres retirar: "))
+    if balance_a-decrease > 0:
+        print()
+        print ("Se retiranro", "%.2f"%decrease+ "$ de su cuenta")
+        balance_a= balance_a-decrease
+    else:
+        print()
+        print ("No cunetans con suficinetes fondos")
+    Balance()
+
+#menu de funciones  
+init() 
+Balance()
+def menu():
+    print()
+    print("--------------")
+    print ("Menu del Banco")
+    print("(1) Mirar cantidad de dinero")
+    print("(2) Depositar dinero")
+    print("(3) Extrer dinero")   
+    print ("(4) Salir")
+    print (" > ")
+  
+repetir="si"
+while repetir =="si":
+    menu()
+    eleccion =input()
+    if eleccion<"1" or eleccion>"5":
+        print ()
+        print("Eleccion erronea")
+    if eleccion =="1":
+        Balance()
+    if eleccion =="2":
+        deposito()
+    if eleccion =="3":
+        retirar()
+    if eleccion=="4":
+        print("Good Bye!")
+        repetir="no"
+    SystemExit()
