@@ -1,5 +1,5 @@
 balance_a=0
-#ingresar a la cuneta
+  
 def init():
     global balance_a
     balance_a=250.00
@@ -25,13 +25,40 @@ while pin_code!= pin_intento:
 print ()
 print ("Pin Correcto")
 print ("------------")
-#primera funcion: mostrar cantidad de dinero en cuenta   
-def Balance(): 
+
+init()
+def init2():
+    global balance_a
+    balance_a=250.00
+print("----------------------")
+print("")
+print("Verficar tu identidad")
+intentos= 3
+dni="12345678"
+dni_intento= input("Ingrese su DNI --->")
+while dni!= dni_intento:
+    intentos=intentos-1
+    if (intentos==2):
+        print ("DNI incorrecto, intentos restantes = 2")
+        dni_intento= input ("ingrese su DNI: ")
+    elif (intentos==1):
+        print ("DNI incorrecto, intentos restantes = 1")
+        dni_intento= input ("Ingrese su DNI: ")
+    elif (intentos==0):
+        print ("Sin intentos: su tarjeta sera retenida, por favor comuniquese con atencion al cliente")
+   
+        SystemExit()
+print ()
+print ("Identidad verificada")
+print ("------------")
+
+  
+def Balance():   
     global balance_a
     print()
     print ("Tu dinero :",end="")
     print ("%.2f" % balance_a)
-#segunda funcion: depositar dinero
+   
 def deposito():
     print ("----------------")
     print ("Menu de deposito")
@@ -44,7 +71,8 @@ def deposito():
     print ("Se ingresaron", "%.2f" %deposittoaccount,"$ a su cuenta")
     balance_a=balance_a +deposittoaccount
     Balance()
-#tercera funcion: retirar dinero     
+    
+  
 def retirar():
     print()
     print ("------------")
@@ -62,8 +90,8 @@ def retirar():
         print ("No cunetans con suficinetes fondos")
     Balance()
 
-#menu de funciones  
-init() 
+  
+init2() 
 Balance()
 def menu():
     print()
@@ -91,4 +119,4 @@ while repetir =="si":
     if eleccion=="4":
         print("Good Bye!")
         repetir="no"
-    SystemExit()
+    SystemExit() 
